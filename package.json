@@ -1,0 +1,40 @@
+{
+  "name": "saucedemo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test",
+    "test:ui": "npx playwright test --project=sanity --project=regression",
+    "test:api": "npx playwright test --project=api",
+    "test:sanity": "npx playwright test --project=sanity",
+    "test:regression": "npx playwright test --project=regression",
+    "test:headed": "npx playwright test --headed",
+    "test:debug": "npx playwright test --debug",
+    "test:ui-mode": "npx playwright test --ui",
+    "report:html": "npx playwright show-report",
+    "report:allure": "npx allure generate ./allure-results --clean && npx allure open ./allure-report",
+    "report:allure-generate": "npx allure generate ./allure-results --clean",
+    "report:allure-open": "npx allure open ./allure-report",
+    "clean": "rimraf test-results playwright-report allure-results allure-report",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --ext .ts --fix",
+    "format": "prettier --write \"src/**/*.ts\" \"*.ts\"",
+    "format:check": "prettier --check \"src/**/*.ts\" \"*.ts\"",
+    "type-check": "tsc --noEmit"
+  },
+  "keywords": [],
+  "author": "Edwin Perona",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.54.1",
+    "@types/node": "^24.0.14",
+    "allure-commandline": "^2.34.1"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^9.9.0",
+    "allure-playwright": "^2.0.0",
+    "dotenv": "^17.2.0"
+  }
+}
