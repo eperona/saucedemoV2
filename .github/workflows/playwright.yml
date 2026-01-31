@@ -31,6 +31,9 @@ jobs:
       run: npm run test:${{ matrix.project }}
       env:
         CI: true
+        URL: ${{ secrets.TEST_URL }}
+        USERID: ${{ secrets.TEST_USERID }}
+        PASSWORD: ${{ secrets.TEST_PASSWORD }}
     
     - name: Upload Test Results
       uses: actions/upload-artifact@v4
