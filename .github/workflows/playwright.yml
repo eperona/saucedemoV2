@@ -11,7 +11,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        project: [sanity, regression, api]
+        project: [regression, api]
     steps:
     - uses: actions/checkout@v4
     

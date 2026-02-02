@@ -4,8 +4,6 @@ import { expect, step } from '../tests/base';
 export default class CheckoutCompletePage {
 
     private readonly backHomeButtonSelector = "#back-to-products";
-    private readonly completeHeaderSelector = ".complete-header";
-    private readonly completeTextSelector = ".complete-text";
 
     constructor(private page: Page) {}
 
